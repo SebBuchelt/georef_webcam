@@ -1,7 +1,7 @@
 # georef_webcam <img width="429" align="right" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="435" > 
 
 
-### Python package to georeference webcam images 
+### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
 - **Citation**: Buchelt, S. (2018-): georef_webcam 0.0.1, https://github.com/SebBuchelt/georef_webcam.
 - **License**: CC-BY-NC-SA 4.0
