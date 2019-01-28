@@ -1,4 +1,4 @@
-# georef_webcam <img width="429" align="right" src="https://raw.github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://raw.github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="435" > 
+# georef_webcam <img width="429" align="right" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="435" > 
 
 
 ### Python package to georeference webcam images 
