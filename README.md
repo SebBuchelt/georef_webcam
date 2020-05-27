@@ -13,11 +13,11 @@
 `georef_webcam` is a python package in development stage. It provides functionalities to georeference camera images without accurate knowlegde about needed input parameters.
 This script enables the user to georeference images based on rough estimations about camera position, system parameters & looking direction. <br /> 
 Additionally, Ground Control Points (GCPs) can be added to optimize the projection parameters for a better accuracy in geolocation. <br /> <br /> 
-`georef_webcam` uses the Matlab scripts of the [PRACTISE package](https://github.com/shaerer/PRACTISE) to run the projection procedure. Based on its output, `georef_webcam` generates tif-files in the size of the original image with the coordinate position (Easting & Northing) of each pixel. Furthermore, a mask layer is generated to filter areas above the skyline. Based on those, a projected map of the camera image is produced.
+`georef_webcam` uses the Matlab scripts of the [`PRACTISE` package](https://github.com/shaerer/PRACTISE) to run the projection procedure. Based on its output, `georef_webcam` generates tif-files in the size of the original image with the coordinate position (Easting & Northing) of each pixel. Furthermore, a mask layer is generated to filter areas above the skyline. Based on those, a projected map of the camera image is produced.
 
 #### Requirements
 Please look in `requirements.txt` to see, which python libraries are required for the  `georef_webcam` package.
-It is also mandatory to download `Octave`, as the core projection procedure is running on Matlab scripts from [PRACTISE package](https://github.com/shaerer/PRACTISE). PRACTISE is automatically downloaded by `georef_webcam`. <br />
+It is also mandatory to download `Octave`, as the core projection procedure is running on Matlab scripts from [`PRACTISE` package](https://github.com/shaerer/PRACTISE). `PRACTISE` is automatically downloaded by `georef_webcam`. <br />
 So far this tool has been tested in Ubuntu 16.04, 18.04 & Windows 10. For Windows no guarantee for full functionality can be given.
 <br /> <br />
 
@@ -27,14 +27,13 @@ Download package to the directory you like.
 Before starting the execution of the script, you should have the webcam image & the DEM file available for processing. <br />
 <br />
 
-### Start procedure
 The script georef_webcam.py requires only two input parameter: <br />
 - `in_dir`: directory, where DEM, camera image and optionally gcp file are stored (can contain data in separate subdirectories).
 - `out_dir`: directory, where output of `PRACTISE` and `georef_webcam` will be stored in subfolders.
 - `name_of_run` (optional): define a name for projection run to recognize output (default: test_run). <br />
 <br />
 
-#### Start georef_webcam:
+### Start georef_webcam:
 1. Activate environment 
 2. start script:
 ```bash
@@ -43,16 +42,16 @@ $ cd /python_scripts/
 $ python georef_webcam.py in_dir out_dir [-n name_of_run]
 ```
 
-#### Parameter collection:
+### Parameter collection:
 Two options: <br />
 If dictionary with projection parameters has been produced previously, these parameters can be read from json-file and edited. Otherwise new dictionary will be created:
 ```bash
 Do you want to create a new set of projection parameters?  y/n
 ```
-Result is stored as json-file under `in_dir/name_of_run.json`.
+Result is stored as json-file under `in_dir/name_of_run.json`. <br />
 **For further details about projection parameters and their definition, see [Parameters.md](https://github.com/SebBuchelt/georef_webcam/blob/master/Parameters.md).**
 
-#### Projection
+### Projection
 Parameters are taken from dictionary and passed to `PRACTISE`, which is then executed. 
 Afterwards, DEM points projected into image plane are plotted in Octave window and can be checked. Then you can decide between the following options:
 ```bash
@@ -69,7 +68,7 @@ Which of the options do you want to choose?
 - `1`: edits projection parameters, stores in new json file (optionally) and then repeats the projection.
 - `2`: moves on to output generation
 
-#### Output generation
+### Output generation
 The following output is produced and stored in `outdir/georef_result/name_of_run/` (_italic files are optional_):
 - the original image
 - `east_raster` & `north_raster`: two tif-files with the size of the image giving the easting, northing coordinate of each pixel
@@ -79,7 +78,7 @@ The following output is produced and stored in `outdir/georef_result/name_of_run
 - _`image_name_map.tif`: projected map of the camera image_
 
 ## Output examples
-<p align="center"><img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/easting.jpg"> <img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/northing.jpg"> </p>
+<p align="center"><img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Easting.jpg"> <img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Northing.jpg"> </p>
 <p align="center"><sub>Figure 4: Final result: Coordinate rasters. </sub></p>
 <br>
 
