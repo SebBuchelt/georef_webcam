@@ -45,7 +45,7 @@ $ python georef_webcam.py in_dir out_dir [-n name_of_run]
 ### Parameter collection:
 Two options: <br />
 If dictionary with projection parameters has been produced previously, these parameters can be read from json-file and edited. Otherwise new dictionary will be created:
-```bash
+```ba
 Do you want to create a new set of projection parameters?  y/n
 ```
 Result is stored as json-file under `in_dir/name_of_run.json`. <br />
@@ -54,7 +54,7 @@ Result is stored as json-file under `in_dir/name_of_run.json`. <br />
 ### Projection
 Parameters are taken from dictionary and passed to `PRACTISE`, which is then executed. 
 Afterwards, DEM points projected into image plane are plotted in Octave window and can be checked. Then you can decide between the following options:
-```bash
+```ba
 Projection has been executed. 
 What do you want to do next?
 Please select one of the following options:
