@@ -72,10 +72,10 @@ Which of the options do you want to choose?
 The following output is produced and stored in `outdir/georef_result/name_of_run/` (_italic files are optional_):
 - the original image
 - `east_raster` & `north_raster`: two tif-files with the size of the image giving the easting, northing coordinate of each pixel
-- _`alt_raster`: tif-file with altitude of each image pixel_
-- _`dist_raster`: tif-file with distance of each image pixel to camera location_
-- _`mask`: tif-file containing the mask layer_
-- _`image_name_map.tif`: projected map of the camera image_
+- _`alt_raster`:_ tif-file with altitude of each image pixel
+- _`dist_raster`:_ tif-file with distance of each image pixel to camera location
+- _`mask`:_ tif-file containing the mask layer
+- _`image_name_map.tif`:_ projected map of the camera image
 
 ## Output examples
 <p align="center"><img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Easting.jpg"> <img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Northing.jpg"> </p>
