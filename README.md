@@ -60,7 +60,11 @@ After collecting them, the parameters are stored as json-file under `in_dir/[nam
 
 ### Projection:
 Parameters are taken from dictionary and passed to `PRACTISE`, which is then executed. 
-Afterwards, DEM points projected into image plane are plotted in Octave window and can be checked. Then you can decide between the following options:
+Afterwards, DEM points projected into image plane are plotted in Octave window and can be checked:
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Octave_fig.png"></p>
+<p align="center"><sub>Figure 1: DEM points projected into image plane. <br /> Left: wrong projection parameters; Right: Corrected projection parameters. </sub></p>
+
+ Then you can decide between the following options:
 ```ba
 Projection has been executed. 
 What do you want to do next?
@@ -87,14 +91,14 @@ The following output is produced and stored in `outdir/georef_result/name_of_run
 
 ## Output examples
 <p align="center"><img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Easting.jpg"> <img width="45%" src="https://github.com/SebBuchelt/aux_data/blob/master/Northing.jpg"> </p>
-<p align="center"><sub>Figure 1: Final result - Coordinate rasters. </sub></p>
+<p align="center"><sub>Figure 2: Final result - Coordinate rasters. </sub></p>
 <br>
 
 <p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"></p>
-<p align="center"><sub>Figure 2: Used webcam image. </sub></p>
+<p align="center"><sub>Figure 3: Used webcam image. </sub></p>
 <br>
 <p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif"></p>
-<p align="center"><sub>Figure 3: Animation showing same-day Sentinel-2 image overlayed with projected webcam image. </sub></p>
+<p align="center"><sub>Figure 4: Animation showing same-day Sentinel-2 image overlayed with projected webcam image. </sub></p>
 <br>
 
 **More examples can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Examples.md).**<br /> <br /> 
