@@ -1,6 +1,8 @@
 argparse
 collections
 gdal
+git
+gitpython
 json
 math
 numpy
@@ -13,4 +15,5 @@ shutil
 struct
 subprocess
 sys
+tempfile
 time
