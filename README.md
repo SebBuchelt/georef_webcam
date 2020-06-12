@@ -103,6 +103,22 @@ The following output is produced and stored in `outdir/georef_result/name_of_run
 
 **More examples can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Examples.md).**<br /> <br /> 
 
+## Projecting other data
+After a successful georeferencing any data or image with the same acquisition geometry can be projected to map coordinates with the function `project_data2map.py`:
+
+```bash
+$ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir 
+         [-f IMAGE_FOLDER] [-fill FILL_NODATA]
+```
+ The following input parameters are required: 
+- `coord_dir`: directory, where the output of `georef_webcam` with the coordinate rasters and the mask is stored.
+- `filename_or_extension`: select the dataset or image, which should be projected. <br />
+If you want to project several files, just insert the file extension. In this case, the optional variable _`image_folder`_ is required. All dataset with the specified file extension in this folder will be projected.
+- `pixel_size`: define spatial resolution of your product.
+- `out_dir`: directory, where produced maps should be stored.
+- _`fill_nodata`_ (optional): voids in the dataset can be filled with interpolation here. <br /> <br />
+
+
 # References
 This work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE):
 - Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015.
