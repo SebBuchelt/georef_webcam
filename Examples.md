@@ -12,20 +12,20 @@ The camera is located outside the top right corner of the image and looks westwa
 
 ### Upper Vinschgau valley, Italy
 
-<p align="center"><img width="90%" src="https://github.com/SebEagle/Test/blob/master/mals.jpg"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/mals.jpg"></p>
 <p align="center"><sub>Figure 1: Example Vinschgau, Italian Alps. </sub></p>
 <br>
-<p align="center"><img width="90%" src="https://github.com/SebEagle/Test/blob/master/Mals_all.gif"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Mals_all.gif"></p>
 <p align="center"><sub>Figure 2: Animation showing Google Maps sat image, then overlayed with projected webcam image, and, at last, image with improved geolocation accuracy after coregistering to satellite image.  <br>
 The camera is located in the top left corner of the image looking in southeastern direction.</sub></p>
 <br>
 
 ### Zackenberg Research Station, Greenland
 
-<p align="center"><img width="90%" src="https://github.com/SebEagle/Test/blob/master/Zackenberg.JPG"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Zackenberg.JPG"></p>
 <p align="center"><sub>Figure 1: Example Zackenberg Research Station, East Greenland. </sub></p>
 <br>
-<p align="center"><img width="90%" src="https://github.com/SebEagle/Test/blob/master/Zack_all.gif"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Zack_all.gif"></p>
 <p align="center"><sub>Figure 2: Animation showing Planet sat images, then overlayed with projected webcam image, and, at last, image with improved geolocation accuracy after coregistering to satellite image. <br>
 The camera is located in the bottom left corner of the image looking eastwards. </sub></p>
 <br>
