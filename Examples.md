@@ -30,6 +30,8 @@ The camera is located in the top left corner of the image looking in southeaster
 The camera is located in the bottom left corner of the image looking eastwards. </sub></p>
 <br>
 
+The coregistration of projected images is applied to compensate remaining errors caused mainly by lens distorsions.
+
 ## Data sources:
 ### Images
 - [foto-webcam.eu](https://www.foto-webcam.eu)

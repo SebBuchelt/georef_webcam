@@ -7,7 +7,8 @@ The dict file created for the Projection Procedure contains the following inform
 `georef_webcam` searches automatically through all subdirectories of `in_dir` to find the needed files.
 
 ### Image file
-An RGB image is required, all formats supported by [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html) can be used.
+An RGB image is required, all formats supported by [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html) can be used.<br />
+So far .jpg, .png & .tif files have been projected successfully.
 
 ### DEM file
 `PRACTISE` requires a DEM in cartesian coordinates in the ASCII-Grid format. If this is not the case, `georef_webcam` generates this data from the provided input. If the DEM needs to be projected to a cartesian Coordinate Reference System (CRS), the EPSG number of it is asked from the user. <br />
