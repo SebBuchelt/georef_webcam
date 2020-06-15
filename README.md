@@ -113,7 +113,7 @@ $ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir
  The following input parameters are required: 
 - `coord_dir`: directory, where the output of `georef_webcam` with the coordinate rasters and the mask is stored.
 - `filename_or_extension`: select the dataset or image, which should be projected. <br />
-If you want to project several files, just insert the file extension. In this case, the optional variable _`image_folder`_ is required. All dataset with the specified file extension in this folder will be projected.
+If you want to project several files, just insert the file extension (e.g. tif, png, jpg). In this case, the optional variable _`image_folder`_ is required. All dataset with the specified file extension in this folder will be projected.
 - `pixel_size`: define spatial resolution of your product.
 - `out_dir`: directory, where produced maps should be stored.
 - _`fill_nodata`_ (optional): voids in the dataset can be filled with interpolation here. <br /> <br />
