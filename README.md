@@ -16,7 +16,7 @@ Additionally, Ground Control Points (GCPs) can be added to optimize the projecti
 `georef_webcam` uses the Matlab scripts of the [`PRACTISE` package](https://github.com/shaerer/PRACTISE) to run the projection procedure. Based on its output, `georef_webcam` generates tif-files in the size of the original image with the coordinate position (Easting & Northing) of each pixel. Furthermore, a mask layer is generated to filter areas above the skyline. Based on those, a projected map of the camera image is produced.
 
 #### Requirements
-Please look in `requirements.txt` to see, which python libraries are required for the  `georef_webcam` package.
+Please look in [`requirements.txt`](https://github.com/SebBuchelt/georef_webcam/blob/master/requirements.txt) to see, which python libraries are required for the  `georef_webcam` package.
 It is also mandatory to download `Octave`, as the core projection procedure is running on Matlab scripts from [`PRACTISE` package](https://github.com/shaerer/PRACTISE). `PRACTISE` itself is downloaded automatically as the code has to be adapted for `georef_webcam`. <br />
 So far this tool has been tested in Ubuntu 16.04, 18.04 & Windows 10.
 <br /> <br />
