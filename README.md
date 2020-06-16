@@ -5,7 +5,7 @@
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
-- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> More on citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)
+- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> _More on citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
 - **License**: CC-BY-NC-SA 4.0
 
 ## Overview
