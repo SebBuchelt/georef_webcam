@@ -50,7 +50,7 @@ Afterwards the horizontal orientation is defined:
 _The target point is defined as the geographic position of the landscape feature in the center of the image (see also Figure 2)._
 
 The definition of the planar camera position and orientation parameters are depicted here:
-<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Pos_image2.png"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Pos_image.png"></p>
 <p align="center"><sub>Figure 1: Planar Camera Position and Orientation Parameters. </sub></p>
 <br />
 
@@ -71,7 +71,7 @@ Consecutively, you can define the vertical orientation using one of the followin
 
 For both, vertical position and orientation, all other parameters are derived from the given input.
 The definition of the vertical camera position and orientation parameters are depicted here:
-<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Vert_Params2.png"></p>
+<p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Vert_Params.png"></p>
 <p align="center"><sub>Figure 2: Vertical Camera Position and Orientation. </sub></p>
 <br />
 

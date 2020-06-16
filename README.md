@@ -5,12 +5,12 @@
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
-- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam.
+- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> More on citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)
 - **License**: CC-BY-NC-SA 4.0
 
 ## Overview
 
-`georef_webcam` is a python package in development stage. It provides functionalities to georeference oblique camera images in complex terrain without accurate knowlegde about the required input parameters.
+`georef_webcam` is a python package for `python3`. It provides functionalities to georeference oblique camera images in complex terrain without accurate knowlegde about the required input parameters.
 The package enables the user to georeference images based on estimations about camera position, system parameters & looking direction. <br /> 
 Additionally, Ground Control Points (GCPs) can be added to optimize the projection parameters for a better geolocation accuracy. <br /> <br /> 
 `georef_webcam` uses the Matlab scripts of the [`PRACTISE` package](https://github.com/shaerer/PRACTISE) to run the projection procedure. Based on its output, `georef_webcam` generates tif-files in the size of the original image with the coordinate position (Easting & Northing) of each pixel. Furthermore, a mask layer is generated to filter areas above the skyline. Based on those, a projected map of the camera image is produced.
@@ -116,12 +116,13 @@ $ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir
 If you want to project several files, just insert the file extension (e.g. tif, png, jpg). In this case, the optional variable _`image_folder`_ is required. All dataset with the specified file extension in this folder will be projected.
 - `pixel_size`: define spatial resolution of your product.
 - `out_dir`: directory, where produced maps should be stored.
-- _`fill_nodata`_ (optional): voids in the dataset can be filled with interpolation here. <br /> <br />
+- _`fill_nodata`_ (optional): voids in the projected dataset can be filled with interpolation here. <br /> <br />
 
 
-# References
-This work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE):
+# Citation
+Please cite `georef_webcam` as following:
+- Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam.
+As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
 - Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015.
-- Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE – Photo Rectification And ClassificaTIon SoftwarE (V.2.1), Geosci. Model Dev., 9, 307-321, doi:10.5194/gmd-9-307-2016, 2016.
 
 I also want to give special thanks to Gerhard Keuschnig & Florian Radlherr from [foto-webcam.eu](https://www.foto-webcam.eu), who provide a great system for high-resolution webcam images. The images used here are provided by their website.
