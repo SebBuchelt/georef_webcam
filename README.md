@@ -5,7 +5,7 @@
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
-- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> _More on citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
+- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
 - **License**: CC-BY-NC-SA 4.0
 
 ## Overview
@@ -80,7 +80,7 @@ Which of the options do you want to choose?
 - `2`: moves on to output generation <br /> <br />
 
 ### Output generation:
-The following output is produced and stored in `outdir/georef_result/name_of_run/` (_italic files are optional_):
+The following output is produced and stored in `out_dir/georef_result/name_of_run/` (_italic files are optional_):
 - the original image
 - `east_raster` & `north_raster`: two tif-files with the size of the image giving the easting, northing coordinate of each pixel
 - _`alt_raster`:_ tif-file with altitude of each image pixel
@@ -104,7 +104,7 @@ The following output is produced and stored in `outdir/georef_result/name_of_run
 **More examples can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Examples.md).**<br /> <br /> 
 
 ## Projecting other data
-After a successful georeferencing any data or image with the same acquisition geometry can be projected to map coordinates with the function `project_data2map.py`:
+After successfully georeferencing an image, any data or image with the same acquisition geometry can be projected to map coordinates with the function `project_data2map.py`:
 
 ```bash
 $ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir 
@@ -124,6 +124,6 @@ Please cite `georef_webcam` as following:
 - Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam.
 
 As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
-- Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015.
+- Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015. <br />
 
 I also want to give special thanks to Gerhard Keuschnig & Florian Radlherr from [foto-webcam.eu](https://www.foto-webcam.eu), who provide a great system for high-resolution webcam images. The images used here are provided by their website.
