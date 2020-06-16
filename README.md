@@ -122,6 +122,7 @@ If you want to project several files, just insert the file extension (e.g. tif, 
 # Citation
 Please cite `georef_webcam` as following:
 - Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam.
+
 As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
 - Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015.
 
