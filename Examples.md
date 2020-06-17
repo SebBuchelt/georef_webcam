@@ -38,6 +38,6 @@ The coregistration of projected images is applied to compensate remaining errors
 - [Zackenberg Research Station - Greenland Environmental Monitoring Programme](https://g-e-m.dk/)
 ### DEM data
 - DTM South Tyrol 2.5m (find it on [GeoKatalog](http://geocatalogo.retecivica.bz.it/geokatalog/#!home&layer=p_bz%3Ac9128787-1dda-448a-8db5-969b9333eb13))
-- [ArcticDEM 2m](https://www.pgc.umn.edu/data/arcticdem/)
+- [ArcticDEM 2m](https://www.pgc.umn.edu/data/arcticdem/)<br /> <br /> <br /> 
 
-
+_(Back to [Readme](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md))_

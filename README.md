@@ -49,7 +49,7 @@ The script georef_webcam.py requires two input parameter:
 ### Parameter collection:
 Two options: 
 - read an already existing dictionary. The script searches for json-files in the input directory. After loading the dictionary, the parameters can also be edited then.
-- Otherwise, if no previously generated dictionary exists or you want to generate a set of projection parameters, a new dictionary will be created:
+- Otherwise, if no previously generated dictionary exists or you want to generate a new set of projection parameters, a new dictionary will be created:
 ```ba
 Do you want to create a new set of projection parameters?  y/n
 ```

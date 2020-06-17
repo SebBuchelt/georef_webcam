@@ -43,8 +43,10 @@ Additionally, the EPSG-Nr. of the CRS (`camera_epsg`) is collected. Then, `geore
 <br /><br />
 
 ### Planar Camera Orientation
-Next, the horizontal orientation is defined. `PRACTISE` requires a target point for its projection. _The target point is defined as the geographic position of the landscape feature in the center of the image (see also Figure 2)._ However, `georef_webcam` provides two ways to define the horizontal orientation:
-- either by inserting directly the coordinates of a target point in the same way as the camera position
+Next, the horizontal orientation is defined. `PRACTISE` requires a target point for its projection. <br />
+_The target point is defined as the geographic position of the landscape feature in the center of the image (see also Figure 2)._<br />
+ However, `georef_webcam` provides two ways to define the horizontal orientation:
+- either by inserting directly the coordinates of a target point in the same way as the camera position.
 - or by inserting a yaw angle in degree: `yaw_angle_deg`. <br />
 Based on this angle, the required target point is created artificially at a distance of 1km to the camera.
 
