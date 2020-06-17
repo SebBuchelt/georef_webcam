@@ -1,6 +1,6 @@
 # Additional Comments
 
-To improve the geolocation accuracy please consider the following circumstances
+To improve the geolocation accuracy please consider the following circumstances:
 
 ### Lens distorsions
 

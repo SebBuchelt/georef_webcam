@@ -5,7 +5,7 @@
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
-- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam. <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
+- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0, doi:[10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913). <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
 - **License**: CC-BY-NC-SA 4.0
 
 ## Overview
@@ -123,7 +123,7 @@ In this case, the optional variable _`image_folder`_ is required. All datasets i
 
 ## Citation
 Please cite `georef_webcam` as following:
-- Buchelt, S. (2020-): georef_webcam V.1.0, https://github.com/SebBuchelt/georef_webcam.
+- Buchelt, S. (2020-): georef_webcam V.1.0, doi:[10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913).
 
 As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
 - Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015. <br /><br />
