@@ -1,5 +1,5 @@
 # Parameters for Projection Procedure
-The dict file created for the Projection Procedure contains the following information:
+The dictionary created for the Projection Procedure contains the following information:
 - directories to input files (image, DEM, GCPs).
 - projection parameters. <br /> <br /> 
 
@@ -8,18 +8,18 @@ The dict file created for the Projection Procedure contains the following inform
 
 ### Image file
 An RGB image is required, all formats supported by [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html) can be used.<br />
-So far .jpg, .png & .tif files have been projected successfully.
+So far .jpg, .png & .tif files have been tested & projected successfully.
 
 ### DEM file
 `PRACTISE` requires a DEM in cartesian coordinates in the ASCII-Grid format. If this is not the case, `georef_webcam` generates this data from the provided input. If the DEM needs to be projected to a cartesian Coordinate Reference System (CRS), the EPSG number of it is asked from the user. <br />
-Additionally, the spatial resolution of the DEM can be resampled. We recommend to do so (e.g to 50 or 100m), if a large area is covered by the image and the projection parameters are not accurately known. It is faster to run the projection estimations on the DEM with lower spatial resolution. As soon as the projection accuracy is satisfying, you can change the DEM path variable in the dictionary to the one with full resolution. Use the option to edit the dictionary for that ([here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#projection)).
+Additionally, the spatial resolution of the DEM can be resampled. We recommend to do so (e.g to 50 or 100m), if a large area is covered by the image and the projection parameters are not accurately known. It is faster to run the projection estimations on the DEM with lower spatial resolution. As soon as the projection accuracy is satisfying, you can change the DEM path variable in the dictionary to the one with full resolution. Use the option to edit the dictionary for that (see [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#projection)).
 
 ### GCP file (optional)
-Ground Control Points (GCPs) can be used to optimize the projection with the DDS optimization, which is incorporated into `PRACTISE`. See [Example](https://github.com/SebBuchelt/aux_data/blob/master/GCP_example.gcp.txt) for the required txt-file formatting.
+Ground Control Points (GCPs) can be used to optimize the projection with the Dynamically Dimensioned Search (DDS) optimization, which is incorporated into `PRACTISE`. See [Example](https://github.com/SebBuchelt/aux_data/blob/master/GCP_example.gcp.txt) for the required txt-file formatting.
 <br /> <br /> 
 
 ## Projection Parameters
-After inserting the directories to the input files, the parameters required for the projection procedure are collected. Those parameters can be accounted into 4 different groups:
+After inserting the directories to the required input, the parameters for the projection procedure are collected. Those parameters can be divided in 4 different groups:
 - camera position
 - camera orientation
 - sensor parameters
@@ -39,15 +39,15 @@ At first the coordinate position of the camera has to be entered. You can enter 
 - `camera_Easting`/`camera_longitude`
 - `camera_Northing`/`camera_latitude`
 
-With information about the EPSG-Nr. of the CRS (`camera_epsg`), `georef_webcam` automatically projects the camera location to the CRS of the DEM: <br /> `camera_DEMCRS_E`, `camera_DEMCRS_N`
+Additionally, the EPSG-Nr. of the CRS (`camera_epsg`) is collected. Then, `georef_webcam` automatically projects the camera location to the CRS of the DEM: <br /> `camera_DEMCRS_E`, `camera_DEMCRS_N`
 <br /><br />
 
 ### Planar Camera Orientation
-Afterwards the horizontal orientation is defined:
-- either by inserting a yaw angle in degree: `yaw_angle_deg`
-- or by inserting the coordinates of a target point in the same way as the camera position
+Next, the horizontal orientation is defined. `PRACTISE` requires a target point for its projection. _The target point is defined as the geographic position of the landscape feature in the center of the image (see also Figure 2)._ However, `georef_webcam` provides two ways to define the horizontal orientation:
+- either by inserting directly the coordinates of a target point in the same way as the camera position
+- or by inserting a yaw angle in degree: `yaw_angle_deg`. <br />
+Based on this angle, the required target point is created artificially at a distance of 1km to the camera.
 
-_The target point is defined as the geographic position of the landscape feature in the center of the image (see also Figure 2)._
 
 The definition of the planar camera position and orientation parameters are depicted here:
 <p align="center"><img width="90%" src="https://github.com/SebBuchelt/aux_data/blob/master/Pos_image.png"></p>
@@ -59,7 +59,7 @@ Two options exist to define the vertical location of the camera:
 - relative height of camera above ground / above DEM: `camera_offset`
 - absolute height of camera: `camera_DEMCRS_Z`
 
-To support the selection of a reasonable value, the procedure tells the user the DEM height at the camera location (`camera_DEM_height`) before asking a value.
+To support the user in selecting a reasonable height value, the procedure tells you the DEM height at the camera location (`camera_DEM_height`) before.
 <br /><br />
 
 ### Vertical Camera Orientation
@@ -86,8 +86,8 @@ If values are unknown, keep default for a first try. But change them, if you kno
 - Buffer range: `buffer_around_camera_m` (100m) <br />
 This buffer variable is implemented in `PRACTISE` to make close range topography transparent for viewshed calculation and to avoid, that close slopes wrongly obscure the panoramic view.
 
-_Sensor size parameters can possibly be found on [digicamdb.com](https://www.digicamdb.com/)._
+_Sensor size parameters (width & height) can possibly be found on [digicamdb.com](https://www.digicamdb.com/)._
 <br /><br />
 
 ## Execution of Projection
-After the collection of all required variables, parameters are passed to `PRACTISE` and projection is executed (see [Readme](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#projection)).
+After collecting all required variables, the parameters are passed to `PRACTISE` and the projection is executed (see [Readme](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#projection)).
