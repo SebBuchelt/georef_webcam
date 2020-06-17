@@ -1,7 +1,9 @@
 # georef_webcam <img width="429" align="right" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="420" > 
 
 <img width="300" align="left" src="https://github.com/SebBuchelt/aux_data/blob/master/Revision.png">
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3898914.svg)](https://doi.org/10.5281/zenodo.3898914)
 <br /> <br />
+
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
