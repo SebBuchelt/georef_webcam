@@ -1,9 +1,9 @@
 # georef_webcam <img width="429" align="right" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="420" > 
+ <br /> <br />
 
-<a href="https://doi.org/10.5281/zenodo.3898913"><img align="right" src="https://zenodo.org/badge/DOI/10.5281/zenodo.3898913.svg" alt="DOI"></a> <br /> <br />
 
+## Python package to georeference webcam images <a href="https://doi.org/10.5281/zenodo.3898913"><img align="right" src="https://zenodo.org/badge/DOI/10.5281/zenodo.3898913.svg" alt="DOI"></a>
 
-## Python package to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
 - **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913). <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
 - **License**: CC-BY-NC-SA 4.0
