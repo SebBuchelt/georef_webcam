@@ -17,7 +17,7 @@ Additionally, Ground Control Points (GCPs) can be added to optimize the projecti
 
 #### Requirements
 Please look in [`requirements.txt`](https://github.com/SebBuchelt/georef_webcam/blob/master/requirements.txt) to see, which python libraries are required for the  `georef_webcam` package.
-It is also mandatory to download & install the free software `Octave`, as the core projection procedure is running on Matlab/Octave scripts from [`PRACTISE` package](https://github.com/shaerer/PRACTISE). `PRACTISE` itself is downloaded automatically as the code has to be adapted for `georef_webcam`. <br />
+It is also mandatory to download & install the free software [`Octave`](https://www.gnu.org/software/octave/download.html), as the core projection procedure is running on Matlab/Octave scripts from [`PRACTISE` package](https://github.com/shaerer/PRACTISE). `PRACTISE` itself is downloaded automatically as the code has to be adapted for `georef_webcam`. <br />
 So far this tool has been tested in Ubuntu 16.04, 18.04 & Windows 10.
 <br /> <br />
 
@@ -103,7 +103,7 @@ The following output is produced and stored in `out_dir/georef_result/name_of_ru
 
 **More examples can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Examples.md).**
 
-**Additional Comments on how to further improve geolocation accuracy can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Further_Comments.md).** (Only of interest, if you are already familiar with how the package works.) <br /> <br /> 
+**Additional Comments on how to further improve geolocation accuracy can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Further_Comments.md).** <br /> (Only of interest, if you are already familiar with how the package works.) <br /> <br /> 
 
 ## Projecting other data
 After successfully georeferencing an image, any other data or image with the same acquisition geometry can be projected to map coordinates with the following function `project_data2map.py`:
@@ -120,8 +120,6 @@ In this case, the optional variable _`image_folder`_ is required. All datasets i
 - `pixel_size`: define spatial resolution of your product.
 - `out_dir`: directory, where produced maps should be stored.
 - _`fill_nodata`_ (optional): voids in the projected dataset can be filled with interpolation here. <br /> <br />
-
-## Further Comments on how to improve geolocation accuracy
 
 ## Citation
 Please cite `georef_webcam` as following:
