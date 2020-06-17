@@ -1,12 +1,12 @@
 # georef_webcam <img width="429" align="right" src="https://github.com/SebBuchelt/aux_data/blob/master/hintereisferner_webcam.jpg"> <br /> <br /> <img src="https://github.com/SebBuchelt/aux_data/blob/master/compare.gif" width="420" > 
 
 <img width="300" align="left" src="https://github.com/SebBuchelt/aux_data/blob/master/Revision.png">
-<a href="https://doi.org/10.5281/zenodo.3898914"><img align="right" src="https://zenodo.org/badge/DOI/10.5281/zenodo.3898914.svg" alt="DOI"></a> <br /> <br />
+<a href="https://doi.org/10.5281/zenodo.3898913"><img align="right" src="https://zenodo.org/badge/DOI/10.5281/zenodo.3898913.svg" alt="DOI"></a> <br /> <br />
 
 
 ### Python toolbox to georeference webcam images 
 - **Maintainer**: Sebastian Buchelt
-- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898914](https://doi.org/10.5281/zenodo.3898913). <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
+- **Citation**: Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913). <br /> _More on correct citation [here](https://github.com/SebBuchelt/georef_webcam/blob/master/README.md#citation)._
 - **License**: CC-BY-NC-SA 4.0
 
 ## Overview
@@ -124,7 +124,7 @@ In this case, the optional variable _`image_folder`_ is required. All datasets i
 
 ## Citation
 Please cite `georef_webcam` as following:
-- Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898914](https://doi.org/10.5281/zenodo.3898913).
+- Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913).
 
 As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
 - Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015. <br /><br />
