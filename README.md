@@ -35,8 +35,8 @@ Before starting the execution of the script, you should have the webcam image & 
 1. Activate environment 
 2. set directory to downloaded package & start script:
 ```bash
-$ cd /path/to/georef_webcam/
-$ cd /python_scripts/
+$ cd /path/to/dowloaded/and/unzipped/folder/
+$ cd /georef_webcam_v1_0/python_scripts
 $ python georef_webcam.py in_dir out_dir [-n name_of_run]
 ```
 
@@ -105,7 +105,7 @@ The following output is produced and stored in `out_dir/georef_result/name_of_ru
 **Additional Comments on how to further improve geolocation accuracy can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Further_Comments.md).** <br /> (Only of interest, if you are already familiar with how the package works.) <br /> <br /> 
 
 ## Projecting other data
-After successfully georeferencing an image, any other data or image with the same acquisition geometry can be projected to map coordinates with the following function `project_data2map.py`:
+After successfully georeferencing an image, any other data or image with the same acquisition geometry can be projected to map coordinates. Besides RBG images also tif files with multiple bands can be projected with the following function `project_data2map.py`:
 
 ```bash
 $ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir 
