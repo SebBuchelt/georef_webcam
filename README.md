@@ -125,9 +125,8 @@ Please cite `georef_webcam` as following:
 - Buchelt, S. (2020-): georef_webcam V.1.0. Zenodo. [https://doi.org/10.5281/zenodo.3898913](https://doi.org/10.5281/zenodo.3898913).
 
 As this work is primarily based on the [PRACTISE software](https://github.com/shaerer/PRACTISE) and its functionalities, please also cite:
-- Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015. <br /><br />
+- Härer, S., Bernhardt, M., and Schulz, K.: PRACTISE: PRACTISE V.2.1. Zenodo, doi:10.5281/zenodo.35646, 2015. <br />
+
+I also want to give special thanks to Gerhard Keuschnig & Florian Radlherr from [foto-webcam.eu](https://www.foto-webcam.eu), who provide a great system for high-resolution webcam images. The image in the example is provided by their website.<br /><br />
 
 The reuse or adaptation of images and animations provided in the documentation files is only allowed upon request.
-
-
-I also want to give special thanks to Gerhard Keuschnig & Florian Radlherr from [foto-webcam.eu](https://www.foto-webcam.eu), who provide a great system for high-resolution webcam images. The image in the example is provided by their website.
