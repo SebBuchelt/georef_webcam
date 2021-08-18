@@ -3,7 +3,7 @@
 """
 #############################################################################################################
 Created on Wed May 06 2020
-Last edited on Mon Jun 15 2020
+Last edited on Wed Jun 23 2021
 
 Author: Sebastian Buchelt
 
@@ -111,8 +111,8 @@ def create_input(input_dict, name_of_run):
         joined_bound = ''
         joined_bound_neg = ''
         for b in input_dict['var_add']['opt_boundaries']:
-            joined_bound = ', '.join([joined_bound,input_dict['var_add']['opt_boundaries'][b]])
-            joined_bound_neg = ', -'.join([joined_bound_neg,input_dict['var_add']['opt_boundaries'][b]])
+            joined_bound = ', '.join([joined_bound,str(input_dict['var_add']['opt_boundaries'][b])])
+            joined_bound_neg = ', -'.join([joined_bound_neg,str(input_dict['var_add']['opt_boundaries'][b])])
         joined_bound = joined_bound[2:]
         joined_bound_neg = joined_bound_neg[2:]
         output_boundaries = '[' + joined_bound +  ']'

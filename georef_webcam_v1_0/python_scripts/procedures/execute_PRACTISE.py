@@ -3,7 +3,7 @@
 """
 #############################################################################################################
 Created on Thu May 07 2020
-Last edited on Thu Jun 18 2020
+Last edited on Tue Jun 29 2021
 
 Author: Sebastian Buchelt
 
@@ -80,7 +80,7 @@ def dowmload_PRACTISE(octave_dir):
 #       - name_of_run: name for projection run to recognize output.
 ###############################################################################
 
-def run_PRACTISE(prac_input_file, run_name, out_dir):
+def run_PRACTISE(prac_input_file, run_name, out_dir, gcp):
     # import required libraries and submodules of georef_webcam
     import os, subprocess, time, platform
     import modules.aux_functions as aux_func
@@ -108,24 +108,13 @@ def run_PRACTISE(prac_input_file, run_name, out_dir):
     
     
     ##### call PRACTISE script as subprocess
-    #       and print its messages to console (works only in Linux currently)
+    #       and print its messages to console 
     print('\nstart ' + run_name +' of PRACTISE...')
     print('this may take some minutes, depending on the size of the DEM file and the complexity of the projection procedure')
     
-    # procedure depends on platform, here: Windows
-    if(platform.system()=='Windows'):
-        process = subprocess.Popen('octave PRACTISE.m', shell = True,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        time.sleep(10)
-        selected_files = os.listdir(os.path.join(out_dir,'PRACTISE'))
-        selected_files = [x for x in selected_files if 'output_'+run_name in x]
-        selected_files.sort(reverse=True)
-        selected_files=selected_files[0]
-        # wait with next step until PRACTISE execution is completely finished
-        while len(os.listdir(os.path.join(out_dir, 'PRACTISE' ,selected_files)))<6:
-            time.sleep(5)
-    # and here: Linux
-    else:
-        with subprocess.Popen(['octave','PRACTISE.m'],stdout=subprocess.PIPE, bufsize=1, universal_newlines=True) as p:
+    if gcp: octave_cmd = 'octave PRACTISE.m --interactive --gui'
+    else: octave_cmd = 'octave PRACTISE.m'
+    with subprocess.Popen(octave_cmd, shell = True,stdout=subprocess.PIPE, bufsize=1, universal_newlines=True) as p:
             for line in p.stdout:
                 print(line, end='') # process line here
     

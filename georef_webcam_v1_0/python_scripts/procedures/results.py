@@ -3,7 +3,7 @@
 """
 #############################################################################################################
 Created on Fri May 08 2020
-Last edited on Mon Jun 15 2020
+Last edited on Wed Jun 09 2021
 
 Author: Sebastian Buchelt
 
@@ -61,8 +61,10 @@ def show_result(out_dir, run_name):
     
     ##### open figure with octave (execution depends on platform: Windows or Linux)
     if(platform.system()=='Windows'):
+        python_wd = os.getcwd()
         os.chdir(out_dir)
         subprocess.Popen("octave --force-gui run_image.m", shell = True,stdout=subprocess.PIPE)
+        os.chdir(python_wd)
     else:
         subprocess.Popen(["octave",os.path.join(out_dir,'run_image.m')],stdout=subprocess.PIPE)
     time.sleep(5) # wait 5 s until execution continues

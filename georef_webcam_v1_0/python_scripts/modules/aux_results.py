@@ -3,7 +3,7 @@
 """
 #############################################################################################################
 Created on Mon May 11 2020
-Last edited on Tue Jun 16 2020
+Last edited on Tue Jun 29 2021
 
 Author: Sebastian Buchelt
 
@@ -148,7 +148,7 @@ def calculate_distance_raster(points, interpolation_grid, out_dir):
             ref_pts.append((row, col)) 
             
     points_selected =list()
-    subset = max(len(points)/100000,1)
+    subset = int(max(len(points)/100000,1))
     for x in range(0, len(points), subset):
         points_selected.append(points[x])
     

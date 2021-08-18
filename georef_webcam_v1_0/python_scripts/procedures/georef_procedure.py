@@ -3,7 +3,7 @@
 """
 #############################################################################################################
 Created on Thu May 07 2020
-Last edited on Mon Jun 15 2020
+Last edited on Wed Jun 23 2021
 
 Author: Sebastian Buchelt
 
@@ -36,8 +36,9 @@ Author: Sebastian Buchelt
 #       - out_dir: directory, where output of PRACTISE and georef_webcam will be stored in subfolders.
 #       - name_of_run (optional): define a name for projection run to recognize output (default: test_run).
 #       - view: if set False, octave image file with projection result of PRACTISE will not be plotted after executing PRACTISE.
+#       - gcp: if set True, interactive gcp optimisation is executed in octave window.
 ###############################################################################
-def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True):
+def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True, gcp = False, results = False):
     # import required libraries and submodules of georef_webcam
     import modules.aux_functions as aux_func
     import procedures.collect_projection_parameters as collect_params
@@ -45,7 +46,7 @@ def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True):
     import procedures.write_PRACTISE_inputfile as prac_input
     import procedures.execute_PRACTISE as exe_prac
     import procedures.results as proj_results
-    import json
+    import json, sys
     
     ##### create or read dictionary with projection parameters
     if(aux_func.check_input("Do you want to create a new set of projection parameters?")):
@@ -56,6 +57,13 @@ def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True):
         with open(json_file) as read_file:
             dict_file = json.load(read_file)
         dict_file['path'] = out_dir
+
+    if results:
+        print('Calculate results')
+        proj_results.calc_result(dict_file, name_of_run)
+        print('Producing of results sucessfully finished')
+        print('End of programm')
+        sys.exit()
         
     ##### possibility to edit projection parameters
     if(aux_func.check_input("Do you want to edit the projection parameters?")):
@@ -68,7 +76,7 @@ def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True):
         prac_input_file = prac_input.create_input(dict_file, name_of_run)
         
         ##### call PRACTISE and calculate the prepared projection
-        exe_prac.run_PRACTISE(prac_input_file, name_of_run, out_dir)
+        exe_prac.run_PRACTISE(prac_input_file, name_of_run, out_dir, gcp)
         
         ##### show octave image file with projection result of PRACTISE 
         if view:
@@ -93,7 +101,7 @@ def georef_webcam (in_dir, out_dir, name_of_run = "test_run", view = True):
                 edit_file = aux_func.select_choices(['optimized parameters', 'original parameters'])[0]
                 if (edit_file == 'original parameters'):
                     dict_file = old_dict
-            dict_file, name_of_run = edit_params.edit_parameters(dict_file, in_dir, name_of_run)
+            dict_file, name_of_run_new = edit_params.edit_parameters(dict_file, in_dir, name_of_run)
             if not aux_func.check_input("Do you want to rerun projection with adjusted parameters?"):
                 break
             out_dir = dict_file['path']        # path to store PRACTISE output
