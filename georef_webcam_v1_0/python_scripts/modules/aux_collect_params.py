@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 11 2020
-Last edited on Tue Jun 16 2020
+Last edited on Wed Aug 18 2021
 
 Author: Sebastian Buchelt
 
@@ -148,8 +148,10 @@ def select_dem_file(in_dir, dem_ending, sub_dir = False):
     ##### decrease spatial resolution of DEM file, if you want to fasten the projection calculation
     if(aux_func.check_input("Do you want to resample your DEM data to new resolution?")):
         resolution = float(input('Which spatial resolution should the resampled DEM have? \n'))
+        dem_file_int2 = dem_file[0:-4]+'_res' + str(int(resolution)) + '.tif'
         dem_file_new = dem_file[0:-4]+'_res' + str(int(resolution)) + '.asc'
-        subprocess.call(['gdal_translate', '-of', 'AAIGrid', '-a_nodata', '-3.402823466e+38', '-tr', str(resolution), str(resolution), '-r', 'bilinear', dem_file, dem_file_new])
+        subprocess.call(['gdalwarp', '-of', 'GTiff', '-tr', str(resolution), str(resolution), '-r', 'bilinear', dem_file, dem_file_int2])
+        subprocess.call(['gdal_translate', '-of', 'AAIGrid', '-a_nodata', '-3.402823466e+38', dem_file_int2, dem_file_new])
         dem_file = dem_file_new
         
     # return dem file name used for PRACTISE to main procedure
@@ -178,11 +180,15 @@ def define_position(aux_dict, name = 'camera', edit = False):
     # either lat lon coordinates
     if(aux_dict[name+'_epsg'] == str(4326)):
         aux_dict = add2dict(aux_dict, [name+'_longitude', name+'_latitude'],overwrite=edit)
+        aux_dict[name+'_longitude'] = float(aux_dict[name+'_longitude'])
+        aux_dict[name+'_latitude'] = float(aux_dict[name+'_latitude'])
         aux_dict[name+'_x'] = aux_dict[name+'_longitude']
         aux_dict[name+'_y'] = aux_dict[name+'_latitude']
     # or Easting & Northing coordinates
     else:
         aux_dict = add2dict(aux_dict, [name+'_Easting', name+'_Northing'],overwrite=edit)
+        aux_dict[name+'_Easting'] = float(aux_dict[name+'_Easting'])
+        aux_dict[name+'_Northing'] = float(aux_dict[name+'_Northing'])
         aux_dict[name+'_x'] = aux_dict[name+'_Easting']
         aux_dict[name+'_y'] = aux_dict[name+'_Northing']
     
@@ -396,7 +402,7 @@ def orientation_angle(dictionary):
     ##### collect orientation angle
     print('Orientation angle is required: North: 0/360°, East: 90°, South: 180°, West: 270°')
     print('Possible value range: 0-360°')
-    dictionary['var_add']['yaw_angle_deg'] = input("Please insert yaw or orientation angle [°]: \n ")
+    dictionary['var_add']['yaw_angle_deg'] = float(input("Please insert yaw or orientation angle [°]: \n"))
     ##### derive target point location from it
     dx,dy = calc_target_from_lookdir(float(dictionary['var_add']['yaw_angle_deg']))
     dictionary['target_DEMCRS_E'] =  float(dictionary['camera_DEMCRS_E']) + dx

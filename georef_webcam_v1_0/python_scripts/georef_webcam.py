@@ -40,6 +40,8 @@ parser.add_argument(dest='in_dir', type=str, help='directory containing input')
 parser.add_argument(dest='out_dir', type=str, help='output directory')
 parser.add_argument("-n", "--name_of_run", type = str, help='naming of PRACTISE run', default='test_run')
 parser.add_argument("-no_view","--no_view", help="add, if intermediate projection result should not be shown in Octave", action="store_true")
+parser.add_argument("-gcp","--gcp_correction", help="add, if interactive gcp correction is executed (only needed in Windows)", action="store_true")
+parser.add_argument("-r","--results", help="add, if only results of a specific run should be calculated", action="store_true")
 args = parser.parse_args()
 if args.no_view:
     view = False
@@ -47,4 +49,4 @@ else:
     view = True
     
 # pass arguments to georef procedure
-georef.georef_webcam(args.in_dir,args.out_dir, args.name_of_run, view)
+georef.georef_webcam(args.in_dir,args.out_dir, args.name_of_run, view, args.gcp_correction, args.results)
