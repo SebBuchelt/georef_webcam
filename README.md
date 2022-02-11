@@ -105,20 +105,25 @@ The following output is produced and stored in `out_dir/georef_result/name_of_ru
 **Additional Comments on how to further improve geolocation accuracy can be found [here](https://github.com/SebBuchelt/georef_webcam/blob/master/Further_Comments.md).** <br /> (Only of interest, if you are already familiar with how the package works.) <br /> <br /> 
 
 ## Projecting other data
-After successfully georeferencing an image, any other data or image with the same acquisition geometry can be projected to map coordinates. Besides RBG images also tif files with multiple bands can be projected with the following function `project_data2map.py`:
+After successfully georeferencing an image, any other data or image with the same acquisition geometry can be projected to map coordinates. Besides RBG images also tif files with multiple bands can be projected. Furthermore, it is possible to project georeferenced raster data into image plane as well. You can also project shp-files to image plane or project shp objects, that have been drawn in image plane, to map coordinates. All these tools can be executed with the following function `project_data2map.py`:
 
 ```bash
-$ python project_data2map.py coord_dir filename_or_extension pixel_size out_dir 
-         [-f IMAGE_FOLDER] [-fill FILL_NODATA]
+$ python project_data2map.py coord_dir file_or_folder out_dir 
+         [-ex EXTENSION] [-px PIXEL_SIZE] [-fill FILL_NODATA] 
+         [-i TO_IMAGE_VIEW] [-shp PROJECT_SHP] 
 ```
  These input parameters are required: 
 - `coord_dir`: directory, where the output of `georef_webcam` (coordinate rasters and mask) is stored.
-- `filename_or_extension`: select the dataset or image, which should be projected. <br />
-If you want to project several files, just insert a file extension instead (e.g. tif, png, jpg). <br /> 
-In this case, the optional variable _`image_folder`_ is required. All datasets in this folder with the specified file extension will be projected.
-- `pixel_size`: define spatial resolution of your product.
+- `file_or_folder`: select the dataset or image, which should be projected. <br />
+If you want to project several files within one folder, insert the directory here. <br /> 
+In this case, the optional variable _`-ex EXTENSION`_ is required. All datasets in this folder with the specified file extension will be projected.
 - `out_dir`: directory, where produced maps should be stored.
-- _`fill_nodata`_ (optional): voids in the projected dataset can be filled with interpolation here. <br /> <br />
+- _`pixel_size`_ (optional): define spatial resolution of your product in meter (only required with raster data that is projected to map coordinates).
+- _`fill_nodata`_ (optional): voids in the projected dataset can be filled with interpolation here. The range of interpolation is given in pixel (only required with raster data that is projected to map coordinates).
+- _`to_image_view`_ (optional): set keyword, if you want to project georeferenced data (GeoTiffs or Shapefiles) into image plane.
+- _`project_shp`_ (optional): set keyword, if you want to project one or several shapefiles.
+
+<br /> <br />
 
 ## Citation
 Please cite `georef_webcam` as following:
